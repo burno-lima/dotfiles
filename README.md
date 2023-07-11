@@ -2,4 +2,5 @@
 
 Warning: Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
-![dotfiles](https://user-images.githubusercontent.com/80166382/220259088-a74cfc87-4304-4e2f-95a2-b3499edb93f8.png)
+![dotfiles](![neovim](https://github.com/burno-lima/dotfiles/assets/80166382/fa63a917-791d-4a48-aabd-eea6a422bf6d)
+)
