@@ -27,3 +27,9 @@ Warning: Don’t blindly use my settings unless you know what that entails. Use 
   - [alacritty](https://github.com/alacritty/alacritty) **_(Linux, Macos & Windows)_**
   - [iterm2](https://iterm2.com/) **_(Macos)_**
 - [Catppuccin](https://github.com/catppuccin/catppuccin.git)
+
+- ## Shell setup (macOS & Linux(WSL2))
+
+- [Fish shell](https://fishshell.com/)
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
+- [Oh My Posh](https://ohmyposh.dev/) - Prompt theme engine
