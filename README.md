@@ -1,5 +1,4 @@
-![setup](![setup2024](https://github.com/burno-lima/dotfiles/assets/80166382/b98aca98-1ff0-478b-8d8f-899d92c828fa)
-)
+![setup2024](https://github.com/burno-lima/dotfiles/assets/80166382/470d2a6f-2dde-4cd5-a7d5-8e495b620059)
 
 # Bruno dotfiles
 Warning: Don’t blindly use my settings unless you know what that entails. Use at your own risk!
