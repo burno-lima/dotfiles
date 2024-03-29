@@ -31,5 +31,5 @@ Warning: Don’t blindly use my settings unless you know what that entails. Use 
 - ## Shell setup (macOS & Linux(WSL2))
 
 - [Fish shell](https://fishshell.com/)
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack. - 'CaskaydiaMono Nerd Font Mono'
 - [Oh My Posh](https://ohmyposh.dev/) - Prompt theme engine
