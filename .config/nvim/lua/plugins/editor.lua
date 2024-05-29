@@ -161,4 +161,8 @@ return {
       require("telescope").load_extension("file_browser")
     end,
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    enabled = false,
+  },
 }
