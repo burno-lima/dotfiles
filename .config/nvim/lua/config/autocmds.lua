@@ -5,3 +5,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+-- Disable autoformat for lua files
+vim.api.nvim_create_autocmd("Filetype", {
+  pattern = { "python" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
