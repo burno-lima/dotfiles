@@ -1,4 +1,4 @@
-![setup2024](https://github.com/burno-lima/dotfiles/assets/80166382/470d2a6f-2dde-4cd5-a7d5-8e495b620059)
+![nvim2024](https://github.com/burno-lima/dotfiles/assets/80166382/36ec78d7-ce85-4dc4-982f-09636d670850)
 
 # Bruno dotfiles
 Warning: Don’t blindly use my settings unless you know what that entails. Use at your own risk!
