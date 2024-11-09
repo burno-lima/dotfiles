@@ -1,10 +1,14 @@
 set fish_greeting ""
 
+# eza
+if type -q eza
+    alias ls "eza --icons"
+    alias ll "eza -l -g --icons"
+    alias lla "ll -a"
+end
+
 # alias
 command -qv nvim && alias vim nvim
-
-# theme
-oh-my-posh init fish --config ~/.config/oh-my-posh/themes/catppuccin_macchiato.omp.json | source
 
 # asdf
 source /opt/asdf-vm/asdf.fish
