@@ -1,11 +1,12 @@
-![nvim2024](https://github.com/burno-lima/dotfiles/assets/80166382/36ec78d7-ce85-4dc4-982f-09636d670850)
+![image](https://github.com/user-attachments/assets/1e88054a-3095-45a6-8de9-74c5f305b724)
+
 
 # Bruno dotfiles
 Warning: Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
 ## Contents
 
-- vim (Neovim) config
+- vim (LazyVim) config
 - tmux config
 - fish config
 
@@ -32,4 +33,4 @@ Warning: Don’t blindly use my settings unless you know what that entails. Use 
 
 - [Fish shell](https://fishshell.com/)
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack. - 'CaskaydiaMono Nerd Font Mono'
-- [Oh My Posh](https://ohmyposh.dev/) - Prompt theme engine
+- [Tide](https://github.com/IlanCosman/tide) - The ultimate Fish prompt.
