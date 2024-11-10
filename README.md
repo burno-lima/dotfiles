@@ -27,10 +27,13 @@ Warning: Don’t blindly use my settings unless you know what that entails. Use 
   - [wezterm](https://github.com/wez/wezterm) **_(Linux, Macos & Windows)_**
   - [alacritty](https://github.com/alacritty/alacritty) **_(Linux, Macos & Windows)_**
   - [iterm2](https://iterm2.com/) **_(Macos)_**
-- [Catppuccin](https://github.com/catppuccin/catppuccin.git)
 
-- ## Shell setup (macOS & Linux(WSL2))
+- ### Shell setup Linux(WSL2)
 
 - [Fish shell](https://fishshell.com/)
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack. - 'CaskaydiaMono Nerd Font Mono'
-- [Tide](https://github.com/IlanCosman/tide) - The ultimate Fish prompt.
+- [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack. - 'CaskaydiaMono Nerd Font Mono'.
+- [Tide](https://github.com/IlanCosman/tide) - Shell theme.
+- [Catppuccin](https://github.com/catppuccin/catppuccin.git) - Theme.
+- [Eza](https://github.com/eza-community/eza) - `ls` replacement
+
