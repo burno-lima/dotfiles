@@ -11,7 +11,7 @@ end
 command -qv nvim && alias vim nvim
 
 # asdf
-source /opt/asdf-vm/asdf.fish
+source ~/.asdf/asdf.fish
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
