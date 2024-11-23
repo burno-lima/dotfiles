@@ -13,6 +13,13 @@ command -qv nvim && alias vim nvim
 # asdf
 source ~/.asdf/asdf.fish
 
+# hypr
+function hypr
+    vim ~/.config/hypr/hyprland.conf
+end
+
+set -x set_sysname (hostnamectl --static)
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
