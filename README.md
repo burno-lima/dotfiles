@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/1e88054a-3095-45a6-8de9-74c5f305b724)
+![image](https://github.com/user-attachments/assets/d0aa860c-7a3b-4a50-9709-5ce91033616f)
+
 
 
 # Bruno dotfiles
