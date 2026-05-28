@@ -1,0 +1,45 @@
+[window]
+padding = { x = 10, y = 10 }
+decorations = "None"
+opacity = 0.9
+blur = true
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 120
+lines = 35
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "Bold Italic"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+
+[selection]
+save_to_clipboard = true
+
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
