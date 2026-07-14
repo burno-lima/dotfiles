@@ -8,5 +8,6 @@
 # The popup itself is just a zellij floating pane — minimize/restore it with
 # your pane-mode `w` (ToggleFloatingPanes) / Alt+f. No separate zellij session.
 # NOTE: the first claude is NOT exec'd — if it exits non-zero (e.g. nothing to
-# resume), control returns here and we fall back to a fresh session.
-claude --resume 2>/dev/null || exec claude
+# resume, or "start new conversation" chosen from the --resume picker),
+# control returns here and we fall back to a fresh session, keeping bypass.
+claude --dangerously-skip-permissions --resume 2>/dev/null || exec claude --dangerously-skip-permissions
