@@ -6,7 +6,7 @@ There are plenty of other tools and plugins out there, but I'm happy with the de
 
 ## What's included
 
-- **Alacritty** — terminal emulator
+- **Ghostty** — terminal emulator
 - **Zellij** — terminal multiplexer
 - **Fish** — shell
 - **Neovim** — editor (LazyVim)

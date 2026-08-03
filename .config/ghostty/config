@@ -1,0 +1,28 @@
+theme = solarized_osaka_dark
+
+# Fonte
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+
+# Transparência
+background-opacity = 0.9
+# background-blur = true
+#   Sem efeito no GNOME/Mutter (Wayland) — não há protocolo de blur.
+#   Descomente se migrar pra KDE/Hyprland.
+
+# Janela
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = true
+window-width = 120
+window-height = 35
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Seleção
+copy-on-select = clipboard
+
+# Shift+Enter envia ESC+CR (newline sem submit)
+keybind = shift+enter=text:\x1b\r
