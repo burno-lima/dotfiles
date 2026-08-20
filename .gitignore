@@ -1,0 +1,8 @@
+# tpm clona os plugins aqui — gerenciados pelo prefix+I, não versionados
+.config/tmux/plugins/
+
+# backups locais de config
+*.bak
+
+# logs
+.config/btop/btop.log

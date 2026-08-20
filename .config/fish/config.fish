@@ -14,6 +14,16 @@ end
 # alias
 command -qv nvim && alias vim nvim
 
+# kubernetes — os clusters vivem em configStaging/configProduction,
+# o ~/.kube/config default está vazio
+set -gx KUBECONFIG $HOME/.kube/configStaging
+
+alias kstg "env KUBECONFIG=$HOME/.kube/configStaging kubectl"
+alias kprd "env KUBECONFIG=$HOME/.kube/configProduction kubectl"
+# k9senv é o mesmo script que o tmux chama no prefix + K
+alias k9stg "k9senv stg"
+alias k9prd "k9senv prd"
+
 # opencode
 fish_add_path /home/brunolima/.opencode/bin
 
@@ -22,3 +32,6 @@ if status is-interactive
 end
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# Generated for envman. Do not edit.
+test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish

@@ -25,4 +25,6 @@ cursor-style-blink = false
 copy-on-select = clipboard
 
 # Shift+Enter envia ESC+CR (newline sem submit)
-keybind = shift+enter=text:\x1b\r
+# keybind = shift+enter=text:\x1b\r
+#   Desnecessario no Ghostty >= 1.x: Shift+Enter e reportado nativamente
+#   via kitty keyboard protocol (CSI 13;2u). Descomente se voltar a submeter.
