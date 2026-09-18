@@ -13,6 +13,7 @@ end
 
 # alias
 command -qv nvim && alias vim nvim
+alias claude-yolo "claude --dangerously-skip-permissions"
 
 # kubernetes — os clusters vivem em configStaging/configProduction,
 # o ~/.kube/config default está vazio
