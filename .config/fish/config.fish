@@ -20,7 +20,7 @@ set -gx KUBECONFIG $HOME/.kube/configStaging
 
 alias kstg "env KUBECONFIG=$HOME/.kube/configStaging kubectl"
 alias kprd "env KUBECONFIG=$HOME/.kube/configProduction kubectl"
-# k9senv é o mesmo script que o tmux chama no prefix + K
+# k9senv é o mesmo script que o zellij chama no pane mode + K
 alias k9stg "k9senv stg"
 alias k9prd "k9senv prd"
 
