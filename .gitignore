@@ -1,5 +1,2 @@
 # backups locais de config
 *.bak
-
-# logs
-.config/btop/btop.log

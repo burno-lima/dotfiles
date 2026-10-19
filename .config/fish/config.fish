@@ -6,9 +6,10 @@ fish_add_path $HOME/go/bin
 
 # eza
 if type -q eza
-    alias ls "eza --icons"
-    alias ll "eza -l -g --icons"
+    alias ls "eza --icons=auto --group-directories-first"
+    alias ll "eza -l -g --icons=auto --group-directories-first --git --time-style=long-iso"
     alias lla "ll -a"
+    alias lt "eza --tree --level=2 --icons=auto --git-ignore"
 end
 
 # alias
@@ -26,13 +27,6 @@ alias k9stg "k9senv stg"
 alias k9prd "k9senv prd"
 
 # opencode
-fish_add_path /home/brunolima/.opencode/bin
+fish_add_path ~/.opencode/bin
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
-export PATH="$HOME/.local/bin:$PATH"
-
-# Generated for envman. Do not edit.
-test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
+fish_add_path ~/.local/bin
