@@ -1,7 +1,5 @@
 set fish_greeting ""
 
-fish_add_path $HOME/go/bin
-
 # eza
 if type -q eza
     alias ls "eza --icons=auto --group-directories-first"
