@@ -1,4 +1,10 @@
 [tools]
+"aqua:neovim/neovim" = "latest"
+btop = "latest"
 go = "latest"
+lazygit = "latest"
 node = "latest"
-python = "latest"
+# python = "latest"
+rust = "latest"
+tree-sitter = "latest"
+zellij = "latest"
