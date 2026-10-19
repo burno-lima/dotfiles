@@ -1,7 +1,5 @@
 set fish_greeting ""
 
-mise activate fish | source
-
 fish_add_path $HOME/go/bin
 
 # eza
@@ -15,8 +13,5 @@ end
 # alias
 command -qv nvim && alias vim nvim
 alias claude-yolo "claude --dangerously-skip-permissions"
-
-# opencode
-fish_add_path ~/.opencode/bin
 
 fish_add_path ~/.local/bin

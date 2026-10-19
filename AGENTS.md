@@ -68,13 +68,20 @@ version, use the official package repository for that distro listed on
 
 Check: `fish --version` reports 4.x.
 
-### 3. mise
+### 3. Fish as the login shell
 
-Install from mise's package repository for the distro, following
-<https://mise.jdx.dev/installing-mise.html>. mise is activated by
-`config.fish`, so nothing else is needed for the shell.
+Do this **before** installing anything else: installers such as mise's
+detect the user's shell and write their setup line into the right config
+file only when fish is already the login shell.
 
-Check: `mise --version`.
+Ask the user first. If they agree:
+
+```sh
+chsh -s "$(command -v fish)"
+```
+
+`$SHELL` only changes in new login sessions, so for the rest of the setup
+run installers with `SHELL="$(command -v fish)"` in their environment.
 
 ### 4. Link the dotfiles (stow)
 
@@ -105,7 +112,21 @@ files that fisher, LazyVim or fish write at runtime (`functions/`,
 
 Check: `readlink ~/.config/fish/config.fish` points into `$DOTFILES`.
 
-### 5. Tools from mise
+### 5. mise
+
+Install it with mise's fish installer, which also appends the activation
+line to `~/.config/fish/config.fish`:
+
+```sh
+curl https://mise.run/fish | sh
+```
+
+Then move that appended line out of `config.fish` (see
+[Lines added by installers](#lines-added-by-installers)).
+
+Check: `mise --version`, and `fish -c 'type -q mise'`.
+
+### 6. Tools from mise
 
 ```sh
 mise install
@@ -120,7 +141,7 @@ Check: `mise ls --current` lists every tool from that file as installed, and
 `mise which <tool>` prints a path for each of nvim, zellij, lazygit, btop
 and tree-sitter.
 
-### 6. Fisher and Tide
+### 7. Fisher and Tide
 
 Run it inside fish:
 
@@ -133,7 +154,7 @@ yourself: tell the user to run it once in a real terminal.
 
 Check: `fish -c 'type -q tide'`.
 
-### 7. Nerd Font
+### 8. Nerd Font
 
 Ghostty and the Zellij tab bar use **JetBrainsMono Nerd Font**. Install it
 for the user from the latest release of
@@ -142,7 +163,7 @@ for the user from the latest release of
 
 Check: `fc-list | grep -i 'JetBrainsMono Nerd Font'`.
 
-### 8. Ghostty
+### 9. Ghostty
 
 Follow
 <https://ghostty.org/docs/install/binary> for the recommended method on
@@ -150,7 +171,7 @@ this distro, and tell the user which one you used.
 
 Check: `ghostty --version`.
 
-### 9. Neovim (LazyVim)
+### 10. Neovim (LazyVim)
 
 The starter was installed in step 4. Let LazyVim install its plugins:
 
@@ -161,14 +182,6 @@ mise exec -- nvim --headless "+Lazy! sync" +qa
 Check: `mise exec -- nvim --headless "+checkhealth lazyvim" "+w! /tmp/health.txt" +qa`
 and confirm there are no `ERROR` lines in `/tmp/health.txt`.
 
-### 10. Login shell
-
-Ask the user first. If they agree:
-
-```sh
-chsh -s "$(command -v fish)"
-```
-
 ### 11. Final report
 
 Tell the user, step by step, what was installed, what was skipped because it
@@ -176,9 +189,20 @@ was already there, and what was backed up to `.bak`. Then list what is left
 for them to do by hand:
 
 - run `tide configure` in a real terminal;
-- log out and back in if the login shell changed;
+- log out and back in so the new login shell takes effect;
 - set Ghostty as the default terminal, if they want;
 - on a work machine, copy the kubeconfigs and `k9senv` (see below).
+
+### Lines added by installers
+
+Some installers append a line to `~/.config/fish/config.fish` — mise
+(`… activate fish | source`), opencode (`fish_add_path …/.opencode/bin`),
+and others. That file is stowed, so the line would land in this public repo.
+
+After any installer runs, check `git -C "$DOTFILES" diff`. Move every line it
+added to the machine-only `~/.config/fish/conf.d/local.fish` (fish loads it
+automatically) and restore `config.fish` with
+`git -C "$DOTFILES" checkout .config/fish/config.fish`.
 
 ### Work-only tools (kubectl, k9s)
 
