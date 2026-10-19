@@ -182,13 +182,35 @@ mise exec -- nvim --headless "+Lazy! sync" +qa
 Check: `mise exec -- nvim --headless "+checkhealth lazyvim" "+w! /tmp/health.txt" +qa`
 and confirm there are no `ERROR` lines in `/tmp/health.txt`.
 
-### 11. Final report
+### 11. AI coding CLIs
+
+Install each one with its official installer, checking the linked docs first
+in case the method changed. Run them with `SHELL="$(command -v fish)"` (see
+step 3), then clean up `config.fish` as described in
+[Lines added by installers](#lines-added-by-installers).
+
+| Tool | Official docs | Installer | Installs to |
+| --- | --- | --- | --- |
+| Claude Code | <https://code.claude.com/docs/en/setup> | `curl -fsSL https://claude.ai/install.sh \| bash` | `~/.local/bin/claude` |
+| OpenCode | <https://opencode.ai/docs/> | `curl -fsSL https://opencode.ai/install \| bash` | `~/.opencode/bin/opencode` (adds itself to `config.fish`) |
+| Antigravity CLI | <https://antigravity.google> | `curl -fsSL https://antigravity.google/cli/install.sh \| bash` | `~/.local/bin/agy` |
+
+`~/.local/bin` is already on the `PATH` through `config.fish`.
+
+Do not log in to any of them: logging in opens a browser and needs the
+user's accounts. Leave it for the final report.
+
+Check: `claude --version`, `opencode --version` and `agy --version` each
+print a version (in a new fish shell).
+
+### 12. Final report
 
 Tell the user, step by step, what was installed, what was skipped because it
 was already there, and what was backed up to `.bak`. Then list what is left
 for them to do by hand:
 
 - run `tide configure` in a real terminal;
+- log in to Claude Code (`claude`), OpenCode and Antigravity CLI (`agy`);
 - log out and back in so the new login shell takes effect;
 - set Ghostty as the default terminal, if they want;
 - on a work machine, copy the kubeconfigs and `k9senv` (see below).
