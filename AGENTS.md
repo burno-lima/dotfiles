@@ -193,7 +193,7 @@ step 3), then clean up `config.fish` as described in
 | --- | --- | --- | --- |
 | Claude Code | <https://code.claude.com/docs/en/setup> | `curl -fsSL https://claude.ai/install.sh \| bash` | `~/.local/bin/claude` |
 | OpenCode | <https://opencode.ai/docs/> | `curl -fsSL https://opencode.ai/install \| bash` | `~/.opencode/bin/opencode` (adds itself to `config.fish`) |
-| Antigravity CLI | <https://antigravity.google> | `curl -fsSL https://antigravity.google/cli/install.sh \| bash` | `~/.local/bin/agy` |
+| Antigravity CLI | <https://antigravity.google/download> (CLI section) | `curl -fsSL https://antigravity.google/cli/install.sh \| bash` | `~/.local/bin/agy` |
 
 `~/.local/bin` is already on the `PATH` through `config.fish`.
 
