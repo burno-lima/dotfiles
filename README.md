@@ -4,11 +4,11 @@ My personal dotfiles — just the configs I use day to day.
 
 ## What's included
 
-- **Ghostty** — terminal
-- **Zellij** — terminal multiplexer
-- **Fish** — shell
-- **Neovim** — editor (LazyVim)
-- **mise** — tool version manager
+- [**Ghostty**](https://ghostty.org) — terminal
+- [**Zellij**](https://zellij.dev) — terminal multiplexer
+- [**Fish**](https://fishshell.com) — shell
+- [**Neovim**](https://neovim.io) — editor ([LazyVim](https://www.lazyvim.org))
+- [**mise**](https://mise.jdx.dev) — tool version manager
 
 ## Zellij
 
@@ -16,9 +16,9 @@ Stock keybindings, plus a few floating panes in pane mode (`Ctrl` + `p`):
 
 | key | opens |
 | --- | --- |
-| `g` | lazygit |
-| `b` | btop |
-| `K` | k9s |
+| `g` | [lazygit](https://github.com/jesseduffield/lazygit) |
+| `b` | [btop](https://github.com/aristocratos/btop) |
+| `K` | [k9s](https://k9scli.io) |
 
 ## Theme
 
