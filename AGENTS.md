@@ -182,27 +182,32 @@ for them to do by hand:
 
 ### Work-only tools (kubectl, k9s)
 
-kubectl and k9s are only used on the work machine. **Do not install them by
+kubectl and k9s are only used on the work machine. **Do not set them up by
 default.** Ask the user whether this is a work machine; if not, skip this
-entirely — the related lines in `config.fish` and `config.kdl` are harmless
-when the tools are missing.
+section entirely.
 
-If it is a work machine and the user wants them:
+If it is a work machine and the user wants them, everything goes into
+machine-only files that are **not** in this repo:
 
-- install `kubectl` and `k9s` through mise, in a machine-only file that is
-  not in this repo — **not** with `mise use -g`, which would write to the
-  stowed `config.toml` and leak into every machine:
+- **Tools:** install `kubectl` and `k9s` through mise in
+  `~/.config/mise/conf.d/work.toml` — not with `mise use -g`, which would
+  write to the stowed `config.toml` and leak into every machine:
 
   ```sh
   mkdir -p ~/.config/mise/conf.d
   printf '[tools]\nkubectl = "latest"\nk9s = "latest"\n' > ~/.config/mise/conf.d/work.toml
   mise install
   ```
-- the kubeconfigs (`~/.kube/configStaging`, `~/.kube/config`) are
-  credentials and never belong in this repo — the user copies them over;
-- the `Ctrl+p` then `K` shortcut in Zellij runs `~/.local/bin/k9senv`, a
-  wrapper that is intentionally not in this repo (it holds internal cluster
-  names). The user puts it back by hand.
+
+- **Shell:** kubeconfig variables and aliases go in
+  `~/.config/fish/conf.d/work.fish` (fish loads it automatically). Ask the
+  user for the kubeconfig file names and the aliases they want — they are
+  not written down here on purpose.
+- **Credentials:** the kubeconfigs under `~/.kube/` never belong in this
+  repo — the user copies them over.
+- **k9s wrapper:** the `Ctrl+p` then `K` shortcut in Zellij runs
+  `~/.local/bin/k9senv`, a script that is intentionally not in this repo. The
+  user puts it back by hand.
 
 ## Maintaining the repo
 
